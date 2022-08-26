@@ -64,6 +64,42 @@ while(testcases--){
 
 
 
+
+
+/*
+
+find nth node in linkedlist
+Write a function that takes a linked list and an integer index and returns the data value stored in the node at that index position. If index doesnot exist return None.
+
+Input
+First line is an integer T, representing total number of test cases. For each testcase, 1st line containing space separated integers of linked list from left to right. For each testcase, 2nd line containing index to be found.
+
+Output
+T lines, each line containing the node value for each test case.
+
+Example
+Input: 2
+
+2 2 4 5 6
+
+4
+
+11 1 1 1 3
+
+0
+
+Output: 5
+
+None
+
+
+*/
+
+
+
+
+
+
 //Question
 /*
 find nth node in linkedlist
