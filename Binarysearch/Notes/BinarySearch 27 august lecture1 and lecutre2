@@ -1,0 +1,80 @@
+//BinarySearch algorithm
+//Binary search is a divide and conquer algorithm used in sorted array repeatedly dividing search interval into half.
+
+//let arr = [45, 67, 89, 10, 13, 15]
+//let element = 89;
+
+
+//LinearSearch (Time complexity: O(n))
+//for (let i = 0; i < arr.length; i++) {
+//    if (arr[i] == element) {
+//        console.log(i);
+//    }
+//}
+
+//45 == 89 -> if not, move forward
+//67 == 89 -> if not, move forward
+
+//let arr = [10, 13, 15, 45, 67, 89]
+
+//ProblemStatement: Find given element value in a sorted array. 
+//Steps:
+//1. Begin with mid element of whole array.
+//2. If the value present of mid element:
+//    a) if element value is equal mid element -> return the element value.
+//    b) if element value is greater then mid element -> change search interval to the right half
+//    c) if element value is smaller then mid element -> change search interval to the left half
+
+
+//let arr = [10, 13, 15, 45, 67, 89]
+
+
+//let arr = [50, 60, 10, 20, 30, 40, 0] -> dividing elmeent by 10 and storing element value at quotient index
+
+//let arr = [0, 11, 23, 32, 45, 54, 69, 78, 87, 96] -> divide by element 10 and store element value at reminder index
+
+//0 -> 0 % 10 = 0 -> store the elmeent in 0 index
+//11 -> 11 % 10 = 1 -> store the element in 1 index
+//23 -> 23 % 10 = 3 -> store the elment in 3 index
+
+//33, 23, 13
+
+
+//let arr = [10, 13, 15, 45, 67, 89]
+//console.log(arr) -> 10, 13, 15, 45, 67, 89
+
+//let set = new Set();
+//set.add(10)
+//set.add(13)
+//console.log(set) -> 10, 13
+
+//BinarySearch Recursive
+
+
+function binarySearch(arr, start, end, elementValue) {
+    if (start > end) {
+        return -1
+    }
+    let mid = Math.floor((start + end) / 2)
+    if (arr[mid] == elementValue) {
+        return mid;
+    } else if (arr[mid] > elementValue) {
+        return binarySearch(arr, start, mid - 1, elementValue)
+    } else {
+        return binarySearch(arr, mid + 1, end, elementValue)
+    }
+}
+
+let arr = [10, 13, 15, 45, 67, 89]
+let elementValue = 68
+let idx = binarySearch(arr, 0, arr.length-1, elementValue)
+console.log(idx);
+
+
+// In a building there are N floors.You have to find the maximum floor number from which if you will
+// throw an egg then it will not break.If you will throw egg from x floor and if it will break then
+// assume egg will be break if throw from any floor number higher than x.You have to use minimum number
+// of eggs(in worst case) for this experiment.
+//     Solution: use binary search, first go to N / 2th floor and throw egg, if broken test for floors below N / 2 other test for floors
+//     above N / 2th floor.And repeat the same process until you will find the floor from where egg will break.
+
