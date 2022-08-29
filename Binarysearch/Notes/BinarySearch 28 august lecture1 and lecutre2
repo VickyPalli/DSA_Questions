@@ -1,4 +1,4 @@
-//1. iterative approach
+ //1. iterative approach
 //2. time complexity
 //3. find the floor / roof value of given element using binarySearch(solve egg problem)
 //4. find an element in rotated sorted array.
@@ -19,7 +19,7 @@
 //        }
 //    }
 //    return -1;
-//}
+//}b l
 
 //let arr = [10, 13, 15, 45, 67, 89]
 //elementValue = 13
